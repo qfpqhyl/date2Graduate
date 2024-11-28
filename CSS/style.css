@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    /* 更柔和的渐变背景 */
+    background: linear-gradient(to bottom, #4a90e2, #67b26f);
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    animation: fadeIn 1s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 900;
+}
+
+.countdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.time-card {
+    /* 半透明白色背景 */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    min-width: 180px;
+    animation: slideUp 0.8s ease-out;
+    /* 柔和的阴影 */
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s ease;
+}
+
+.time-card:hover {
+    transform: translateY(-5px);
+}
+
+.time-card .number {
+    font-size: 5rem;
+    font-weight: 900;
+    margin: 0.5rem 0;
+    /* 纯白色数字 */
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.time-card .label {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.message {
+    animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.message p {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.quote {
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeIn 1s ease-out 0.8s both;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.quote p {
+    margin: 1rem 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计调整 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .time-card {
+        min-width: 140px;
+        padding: 1.5rem;
+    }
+
+    .time-card .number {
+        font-size: 3.5rem;
+    }
+
+    .time-card .label {
+        font-size: 1.5rem;
+    }
+
+    .message p {
+        font-size: 1.8rem;
+    }
+
+    .quote {
+        font-size: 1.5rem;
+    }
+}
+
+/* 更小屏幕的调整 */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .time-card {
+        min-width: 120px;
+        padding: 1rem;
+    }
+
+    .time-card .number {
+        font-size: 2.5rem;
+    }
+
+    .time-card .label {
+        font-size: 1.2rem;
+    }
+
+    .message p {
+        font-size: 1.5rem;
+    }
+
+    .quote {
+        font-size: 1.2rem;
+    }
+}
