@@ -179,3 +179,45 @@ h1 {
         font-size: 1.2rem;
     }
 }
+
+/* 添加 GitHub 链接样式 */
+.github-link {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.3s ease;
+}
+
+.github-link:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.github-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+@media (max-width: 480px) {
+    .github-link {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    .github-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
